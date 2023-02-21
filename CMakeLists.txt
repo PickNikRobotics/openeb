@@ -154,7 +154,7 @@ endif(EXISTS "${CMAKE_CURRENT_LIST_DIR}/utils/platforms/CMakeLists.txt")
 ################################################### CMake options
 
 if (NOT ANDROID)
-    option(COMPILE_PYTHON3_BINDINGS "Compile python 3 bindings" ON)
+    option(COMPILE_PYTHON3_BINDINGS "Compile python 3 bindings" OFF)
     cmake_dependent_option(CODE_COVERAGE "Enable code coverage" ON "CMAKE_BUILD_TYPE_LOWER STREQUAL debug" OFF)
     string(TOLOWER ${CMAKE_BUILD_TYPE} CMAKE_BUILD_TYPE_LOWER)
     cmake_dependent_option(GENERATE_DOC "Generate Doxygen documentation" OFF "COMPILE_PYTHON3_BINDINGS" OFF)
