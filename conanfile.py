@@ -8,6 +8,10 @@ class AsensusConan(ConanFile):
         "gtest/1.12.1",
         "opencv/4.5.5",
         "boost/1.78.0",
+        "libusb/1.0.26",        
+        "glfw/3.3.8",
+        "glew/2.2.0",
+
     )
     generators = "cmake_find_package", "cmake_paths"
 

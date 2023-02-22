@@ -203,7 +203,7 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
 # LibUSB
-find_package(LibUSB REQUIRED)
+find_package(libusb REQUIRED)
 
 # Boost
 set (boost_components_to_find program_options filesystem timer chrono thread)
@@ -223,6 +223,7 @@ if (GENERATE_DOC)
 endif (GENERATE_DOC)
 
 # Tests
+option(BUILD_TESTING "" OFF)
 include(CTest)
 if (BUILD_TESTING)
     # Gtest
