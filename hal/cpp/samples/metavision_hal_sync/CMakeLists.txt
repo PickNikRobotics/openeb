@@ -11,7 +11,7 @@ add_executable(metavision_hal_sync metavision_hal_sync.cpp)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
-target_link_libraries(metavision_hal_sync PRIVATE metavision_hal_discovery Boost::program_options ${OpenCV_LIBS} Threads::Threads)
+target_link_libraries(metavision_hal_sync PRIVATE metavision_hal_discovery Boost::program_options opencv_core opencv_highgui Threads::Threads)
 
 install(FILES metavision_hal_sync.cpp
         DESTINATION share/metavision/hal/samples/metavision_hal_sync
